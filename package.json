@@ -1,0 +1,23 @@
+{
+ "name": "pricing-component-with-toggle-master",
+ "description": "frontmentor.io challenge pricing-component-with-toggle-master",
+ "version": "1.0.0",
+ "scripts": {
+  "start": "nodemon -e scss.html --watch index.html --watch ./styles --exec \"npm run build\"",
+  "build": "sass styles/index.scss dist/index.css"
+ },
+ "keywords": [
+  "frontmentor.io",
+  "pricing",
+  "component",
+  "with",
+  "toggle",
+  "master"
+ ],
+ "author": "danitoru",
+ "license": "ISC",
+ "devDependencies": {
+  "nodemon": "2.0.7",
+  "sass": "1.32.8"
+ }
+}

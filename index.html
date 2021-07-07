@@ -6,47 +6,66 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./dist/index.css">
+  
+  <title>Frontend Mentor | Pricing Component With Toggle Master</title>
 </head>
 <body>
 
-  Our Pricing
-  Annually
-  Monthly
-
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
-
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
-
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
+  <section class="pricing">
+    <article class="pricing-plan pricing-plan__header-container">
+      <header class="pricing-plan__header">
+        <h1 class="pricing-plan__title">
+          Our Pricing
+        </h1>
+      </header>
+      <ul class="pricing-plan__period">
+        <li class="pricing-plan__period-item">
+          <span>Annually</span>
+        </li>
+        <li class="pricing-plan__period-item">
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </li>
+        <li class="pricing-plan__period-item">
+          <span>Monthly</span>
+        </li>
+      </ul>
+    </article>
+    
+    <article class="pricing-card__container">
+      Basic
+      &dollar;19.99
+      &dollar;199.99
+      500 GB Storage
+      2 Users Allowed
+      Send up to 3 GB
+      Learn More
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      Professional
+      &dollar;24.99
+      &dollar;249.99
+      1 TB Storage
+      5 Users Allowed
+      Send up to 10 GB
+      Learn More
+  
+      Master
+      &dollar;39.99
+      &dollar;399.99
+      2 TB Storage
+      10 Users Allowed
+      Send up to 20 GB
+      Learn More
+      
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </article>
+    
+  </section>
 </body>
 </html>
