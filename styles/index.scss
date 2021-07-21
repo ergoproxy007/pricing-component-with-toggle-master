@@ -7,7 +7,12 @@ body {
     display: flex;
     flex-direction: column;
     font-family: $text-default-font-family;
-    font-size: $text-default-font-size; 
+    font-size: $text-default-font-size;
+    height: 100%;
+}
+
+main {
+    min-height: 100vh;
 }
 
 ul {
@@ -50,46 +55,50 @@ ul {
     }
 }
 
-@mixin pricing-card-title($color-text) {
+@mixin plan-title($color-text) {
     color: $color-text;
     font-size: 12px;
     display: flex;
     justify-content: center;
 }
 
-.pricing-plan-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.pricing-card {
-    background-color: $color-white;
+.plan {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 30%;
+    justify-content: center;
 
-    &--middle {
-        background-color: $color-primary;
-    }
+    &__card {
+        background-color: $color-white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
 
-    &__basic, &__master {
-        @include pricing-card-title($color-neutral);
+        &--middle {
+            background-color: $color-primary;
+        }
     }
-    &__profesional {
-        @include pricing-card-title($color-white);
+    &__card-basic, &__card-master {
+        @include plan-title($color-neutral);
+    }
+    &__card-profesional {
+        @include plan-title($color-white);
     }
     
-    &__amount {
+    &__card-amount {
         color: $color-neutral-dark;
         font-size: $text-default-font-size-amount;
         margin: 0;
+        
+        &--middle {
+            color: $color-white;
+        }
     }
-    &__details {
+    &__card-details {
         padding-left: 0px;
     }
-    &__details-item {
+    &__card-details-item {
         color: $color-neutral-dark;
         font-size: 12px;
         padding-left: 0px;
@@ -98,7 +107,7 @@ ul {
             color: $color-white;
         }
     }
-    &__details-button {
+    &__card-details-button {
         font-family: $text-default-font-family;
         height: 40px;
         border: none;
@@ -113,18 +122,22 @@ ul {
     }
 }
 
-@media screen and (max-width: $sm-device) {
-    .pricing-plan-container {
+@media screen and (min-width: $sm-device) {
+    .plan {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
-    }
-    .pricing-card {
-        background-color: $color-white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 20px;
+    
+        &__card {
+            background-color: $color-white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+    
+            &--middle {
+                background-color: $color-primary;
+            }
+        }   
     }
 }
