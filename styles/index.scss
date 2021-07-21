@@ -69,6 +69,7 @@ ul {
 
     &__card {
         background-color: $color-white;
+        border-radius: $radius;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -97,26 +98,59 @@ ul {
     }
     &__card-details {
         padding-left: 0px;
+        width: $item-width;
     }
     &__card-details-item {
         color: $color-neutral-dark;
         font-size: 12px;
         padding-left: 0px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        border-top: 1px solid $color-item-border;
+        text-align: center;
 
         &--middle {
             color: $color-white;
+            border-top: 1px solid $color-neutral-very-light;
+
+        }
+        &--last {
+            border-bottom: 1px solid $color-item-border;
+        }
+        &--middle-last {
+            color: $color-white;
+            border-top: 1px solid $color-item-border;
+            border-bottom: 1px solid $color-item-border;
         }
     }
     &__card-details-button {
-        font-family: $text-default-font-family;
         height: 40px;
-        border: none;
+        width: $item-width;
+        font-family: $text-default-font-family;
+        font-size: $text-default-button;
         color: $color-white;
         background-color: $color-primary;
+        border: none;
+        border-radius: $radius; 
+        margin-bottom: 20px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-white;
+            color: $color-primary;
+            border: 1px solid $color-primary;
+        }
 
         &--middle {
             color: $color-primary;
             background-color: $color-white;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $color-primary;
+                color: $color-white;
+                border: 1px solid $color-white;
+            }
         }
         /*border: 2px solid $color-primary;*/
     }
@@ -137,6 +171,8 @@ ul {
     
             &--middle {
                 background-color: $color-primary;
+                margin-top: -20px;
+                margin-bottom: -1px;
             }
         }   
     }

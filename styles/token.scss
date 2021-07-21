@@ -7,6 +7,7 @@ $text-default-font-family: 'Montserrat', sans-serif;
 $text-default-font-size: 15px;
 $text-default-font-size-title: 26px;
 $text-default-font-size-amount: 48px;
+$text-default-button: 11px;
 
 $color-primary: hsl(236, 72%, 79%);
 //$color-primary: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
@@ -15,3 +16,7 @@ $color-neutral-light: hsl(234, 14%, 74%);
 $color-neutral: hsl(233, 13%, 49%);
 $color-neutral-dark: hsl(232, 13%, 33%);
 $color-white: white;
+$color-item-border: hsl(235, 78%, 94%);
+
+$item-width: 85%;
+$radius: 5px;
